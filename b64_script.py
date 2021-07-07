@@ -1,6 +1,8 @@
 # Base64 Encoder/Decoder
 ########### By: AtlasWiki ###########
 # Comment: this is my first python project, hope you enjoy
+# also do not copy the b' ' part
+# that just means byte string
 
 print("Hi, this script was made to encode/decode base64 codes")  
 print("Made by: AtlasWiki \n")
