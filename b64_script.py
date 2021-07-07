@@ -40,9 +40,12 @@ def b64_program():
             else: 
                 decode()
             break # while loop will break when user either chooses encode or decode
+            
 # prompts the user to make a decision to use the program again before closing the program
  # user must make a decision based on the options or else will go in a permanent loop
  # user is taken back to the entire program when wanting to encode/decode again
+# Asks user if the user wants to encode/decode more codes
+# takes user back to the beginning of the program when wanting to encode/decode again
     reset_input = input("\n Do you want to decode/encode more stuff? ")
     if (reset_input.lower() == "yes" or reset_input.lower() == "sure"):
         b64_program()
