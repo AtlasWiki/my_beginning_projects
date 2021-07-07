@@ -26,8 +26,8 @@ def b64_program():
 # If user picks "encode", user will be prompted to input decoded message
     def encode():
         if (user_decision.lower() == "encode"):
-            b64_input = input("\nencode_input: ")
-            b_encoded = bytes(b64_input, encoding = "utf-8") #encodes user-input to byte string
+            text_input = input("\nencode_input: ")
+            b_encoded = bytes(text_input, encoding = "utf-8") #encodes user-input to byte string
             b64_encoded = (base64.b64encode(b_encoded)) # text gets encoded
             print('encode_output: ' + str(b64_encoded).lstrip('b').strip('\'')) # prints encoded string
             input(" \n hit enter to continue        ")
@@ -59,7 +59,7 @@ def b64_program():
 # keeps repeating question when user specifies an unknown option
     else:
         while not (reset_input.lower() == "n"):
-            print("\nError>> that is not even an option \n\n *****please try again*****\n")
+            print("\nError >> that is not even an option \n\n *****please try again*****\n")
             reset_input = input("Do you want to decode/encode more stuff? (y/n) ")
         # takes user to the beginning of the program when user wants to encode/decode again
             if (reset_input.lower() == "y"):
