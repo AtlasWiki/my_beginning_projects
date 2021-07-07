@@ -1,3 +1,4 @@
+# Creative Commons Zero v1.0 Universal
 # Base64 Encoder/Decoder
 ########### By: AtlasWiki ###########
 # Comment: this is my first python project, hope you enjoy
