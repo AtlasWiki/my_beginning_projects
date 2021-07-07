@@ -1,9 +1,9 @@
 # Base64 Encoder/Decoder
-########### By: Nathan Wong ###########
+########### By: AtlasWiki ###########
 # Comment: this is my first python project, hope you enjoy
 
 print("Hi, this script was made to encode/decode base64 codes")  
-print("Made by: Nathan Wong")
+print("Made by: AtlasWiki")
 
 # Entire Base64 Program
 def b64_program():
