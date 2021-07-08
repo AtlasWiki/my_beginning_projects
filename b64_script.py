@@ -7,32 +7,32 @@ print("Hi, this script was made to encode/decode base64 codes")
 print("Made by: AtlasWiki \n")
 
 
-# Entire Base64 Program
 def b64_program():
     import base64
     user_decision = input(" \n encode or decode >> ")
-
-# Decoding Process
-# If user picks "decode", user will be prompted to input encoded message
+    # decoding process
     def decode():
         if (user_decision.lower() == "decode"):
-            b64_decode = input ("\ndecode_input: ") # prompts user to input base64
-            decoded_text = (base64.b64decode(b64_decode)) # base64 code gets decoded
-            print('decode_output: ' + str(decoded_text).lstrip('b').strip('\'')) # prints decoded output
-            input(" \n hit enter to continue        ")
+            decode_count = int(input("\n number of messages to decode (type in #'s): "))
+            # creates # of lines for inputting code and outputting text
+            for number in range(1, decode_count + 1):
+                line_num = input("\n" + str([number]) + ": ") # line number 
+                decoded_text = (base64.b64decode(line_num)) # base64 code gets decoded
+                print('[o]: ' + str(decoded_text).lstrip('b').strip('\'')) # prints decoded output
+            input(" \n\n hit enter to continue        ")
     decode()
 
-# Encoding Process
-# If user picks "encode", user will be prompted to input decoded message
+    # encoding process
     def encode():
-          if (user_decision.lower() == "encode"):
-            text_input = input("\nencode_input: ")
-            b_encoded = bytes(text_input, encoding = "utf-8") #encodes user-input to byte string
-            b64_encoded = (base64.b64encode(b_encoded)) # text gets encoded
-            print('encode_output: ' + str(b64_encoded).lstrip('b').strip('\'')) # prints encoded string
+        if (user_decision.lower() == "encode"):
+            encode_count = int(input("\n number of messages to encode (type in #'s): "))
+            for number in range(1, encode_count + 1):
+                line_num = input("\n" + str([number]) + ": ") # line number 
+                b_encoded = bytes(line_num, encoding = "utf-8") #encodes user-input to byte string
+                b64_encoded = (base64.b64encode(b_encoded)) # text gets encoded
+                print('[o]: ' + str(b64_encoded).lstrip('b').strip('\'')) # prints encoded string
             input(" \n hit enter to continue        ")
     encode()
-
 # Question/prompt loops until user selects "encode" or "decode"
     while not (user_decision.lower() == "encode" or user_decision.lower() == "decode"):
         user_decision = input(" \n encode or decode >> ")
