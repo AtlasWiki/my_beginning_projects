@@ -25,7 +25,7 @@ def b64_program():
 # Encoding Process
 # If user picks "encode", user will be prompted to input decoded message
     def encode():
-        if (user_decision.lower() == "encode"):
+          if (user_decision.lower() == "encode"):
             text_input = input("\nencode_input: ")
             b_encoded = bytes(text_input, encoding = "utf-8") #encodes user-input to byte string
             b64_encoded = (base64.b64encode(b_encoded)) # text gets encoded
