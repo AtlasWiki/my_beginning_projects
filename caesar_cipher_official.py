@@ -34,12 +34,13 @@ def caesar_cipher():
                 user_text = input("\ntext: ")
                 shift = 0
                 shifted_word = ""
-        
+                break_count = -1
                 # shifting algorithm - shifts uppercase letters individually 
                 # uppercase letters are shifted 26 times
                 for list in range(0, 27): # loop does the shift algorithm 26 times
                     shift = list
                     shifted_list = []
+                    
                     # shift algorithm - loop lasts until algorithm goes through all characters
                     # of user's input
                     for letter in user_text:
@@ -67,6 +68,12 @@ def caesar_cipher():
                             # combines all letters in the shift list
                             shifted_word = "".join(shifted_list)
 
+                      # break count cannot pass 3 
+                    break_count = (break_count + 1) % 3
+                    # create line breaks after every 3 lines
+                    if break_count == 0:
+                        print("\n")
+
                     # displays all 26 shifts and outcomes
                     print(str([list]) + ": " + shifted_word)
                                       
@@ -79,6 +86,7 @@ def caesar_cipher():
             if shift_options == "2":
                 user_text = input("\ntext: ")
                 shift = 0
+                break_count = -1
                 # shift uppercase letters individually 
                 for list in range(0, 27): # loop does the shift algorithm 26 times
                     shift = list
@@ -94,6 +102,14 @@ def caesar_cipher():
                             shifted_list.append(letter)
                             # combines all letters into a string
                             shifted_word = "".join(shifted_list)
+
+                    # break count cannot pass 3 
+                    break_count = (break_count + 1) % 3
+                    # create line breaks after every 3 lines
+                    if break_count == 0:
+                        print("\n")
+
+                    # displays all 26 shifts and outcomes
                     print(str([list]) + ": " + shifted_word)
         opt_two()
         #opt 3: shift all letters  
@@ -102,6 +118,7 @@ def caesar_cipher():
                 user_text = input("\ntext: ")
                 # resets shift 
                 shift = 0
+                break_count = -1
                 for list in range(0, 27): # shift algorithm for 26 times
                     shift = list 
                     shifted_list = []
@@ -124,7 +141,14 @@ def caesar_cipher():
                         else:
                             shifted_list.append(letter)
                             shifted_word = "".join(shifted_list)
-                    # print all 26 shifts
+                   
+                    # break count cannot pass 3 
+                    break_count = (break_count + 1) % 3
+                    # create line breaks after every 3 lines
+                    if break_count == 0:
+                        print("\n")
+
+                    # displays all 26 shifts and outcomes
                     print(str([list]) + ": " + shifted_word)
         opt_three()
 
