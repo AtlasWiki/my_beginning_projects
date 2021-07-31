@@ -2,7 +2,6 @@
 # By: AtlasWiki
 print("\nHi this is a character/word counter\n")
 
-
 usr_input = input("\ntext: ")
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 # Individual lists
