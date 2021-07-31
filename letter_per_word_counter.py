@@ -18,12 +18,12 @@ add_char_list()
 
 # separate letters and spaces to form words
 def make_word_list():
-   global letter_str
-   global word_list
-   # split ups all letters and spaces into objects/words
-   letter_str = letter_str.split(" ")
-   # converts to a list
-   word_list = list(letter_str)
+    global letter_str
+    global word_list
+    # split ups all letters and spaces into objects/words
+    letter_str = letter_str.split(" ")
+    # converts to a list
+    word_list = list(letter_str)
 make_word_list()
 
 # removes spaces
