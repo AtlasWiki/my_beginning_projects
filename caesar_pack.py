@@ -1,6 +1,5 @@
 # Creative Commons Zero v1.0 Universal
 # Caesar Cipher encoder/decoder
-# will add english dictionary soon
 # Made by: AtlasWiki
 
 # global variables
