@@ -2,8 +2,6 @@
 # Caesar Cipher encoder/decoder
 # Made by: AtlasWiki
 
-#note: be sure to download the caesar_wordlist.txt file 
-
 # global variables
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 shifted_list = []
