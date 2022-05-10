@@ -2,6 +2,8 @@
 # Caesar Cipher encoder/decoder
 # Made by: AtlasWiki
 
+#note: be sure to download the caesar_wordlist.txt file 
+
 import time
 from colorama import Fore, Style, init
 import os
